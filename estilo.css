@@ -1,0 +1,507 @@
+@charset "utf-8";
+
+
+body{
+   /* font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;*/
+    background-color: rgb(182, 166, 166);
+    margin: 0 ;
+}
+
+#avatar
+{
+     width:50px;
+     height:50px;
+     margin-top: 5px;
+}
+
+header /*cor do menu*/
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: #3b1063;
+    border-bottom: 10px solid black;
+   padding: 10px 20px;
+ 
+}
+ .action /*configuracoes da classe  a no menu*/
+ {
+     display: inline-flex;
+     align-items: center;
+     color: white;
+     font-size: 20px;
+     font-family: "Fira Code",Arial, Helvetica, sans-serif;
+     font-weight: 500;
+     text-decoration: none;
+     margin-right: 30px;/*dando espaçamento entre as palavras no menu*/
+}
+
+.action::before{
+    content: ""; /*desenha o quadrado criado no menu */
+     background-color: #99a6ee;
+     width: 10px;
+     height: 10px;
+     margin-right: 10px;
+}
+
+
+
+.main-button/*configuracoes do bt*/
+{
+    display: inline-block;
+    background-color: #455de0;
+    height: 60px;
+    line-height: 60px;
+   padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 0 black;
+    margin-right: 0px;
+    transition: transform 100ms linear; /*pequena animacao passando o tempo e a forma*/
+    text-decoration: none;
+    color: white;
+    font-family: "Fira Code",Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.main-button::before /*tira o quadrado criado no menu */
+{
+    content: none;
+    
+}
+
+
+.main-button:hover
+{
+    color: black;
+    border-radius: 10px;
+    background-color: springgreen;
+    transform: scale(1.08);
+    
+}
+
+.main-button.-full /*variacao do botao do formulario*/
+{
+    width: 100%;
+}
+
+.main-button.-full:hover
+{
+    transform: scale(1.01);
+    
+}
+
+/*caixa no banner*/
+
+.box
+{
+    display: inline-block;
+    background-color: #3a4042 ;
+    box-shadow: 10px 10px 0 black;
+    text-align: center;
+    padding: 42px 44px;
+}
+
+.box h1
+{
+    margin-bottom: 28px;
+}
+
+/*posicionando o banner*/
+.banner
+{
+    background-image: url(imagens/default1.jfif);
+    /*background-color: #000;*/
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 500px;
+    border-bottom: 10px solid #000;
+    padding-top: 115px;
+    padding-left: 90px;
+
+}
+
+.banner .wrapper
+{
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+}
+
+.banner .box
+{
+    margin-bottom: 40px;
+    
+}
+
+.banner .navigation
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.sessao /* classe de sessoes  de skills*/
+{
+    background-color: #3b1063;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    border-bottom: 10px solid #7c5e99;
+}
+
+.sessao .main-title{
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+ .sessao.-bgBlack /*classe de sessoes  de projetos*/
+{
+    background-color: #000;
+       
+}
+
+
+.sessao.-bdfirst /*colocando a borda*/
+{
+    border-color: #20013d;
+}
+
+
+.wrapper-card /*posicionamento dos cards na secao projetos*/
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo /*apenas arredondou o avatar*/
+{
+    border-radius: 20px;
+}
+
+.card-project
+{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    background-color:  #3b1063;
+    width: 280px; 
+    height: 280px;
+    box-shadow: 10px 10px 0px #FFFF;
+    border-radius: 20px;
+}
+
+.card-project.-blue /*mudando a cor de fundo de um dos cartoes apenas*/
+{
+    background-color: #455de0 ;
+}
+
+
+
+.skill-tec
+{
+    display: flex;
+    align-items: center;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 25px;
+    color: white;
+     
+}
+
+.skill-tec .icon
+{
+    margin-right: 25px;
+    height: 80px;
+    width: 80px;
+    margin-top: 60px;
+    /*margin-left: 10px;
+    margin-right: 5px;*/
+    
+}
+
+.skill-tec .title
+{
+    margin-bottom: 10px;
+}
+
+.skill-tec .direita 
+{
+    display: flex;
+   flex-direction: column;
+  /* margin-bottom: 110px;* - se precisar de espaçamento entre as skills/
+  /* margin-right: 300px;
+   margin-left: 0px;*/
+    
+}
+
+.progress-bar
+{
+    box-sizing: border-box;
+    background-color: #fff; 
+    border: 5px solid #000;
+    height: 30px;
+    
+    
+}
+
+
+.progress-bar::-webkit-progress-bar /*mantem a cor de fundo branca*/
+/*.progress.-bar::-moz-progress-bar*/
+{
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    
+}
+
+.progress-bar::-webkit-progress-value /*muda a cor verde para roxo,esse processo soh funciona se for em qualquer outro mesnos no firefox*/
+{
+    background-color: #455de0;
+}
+
+/*Cores da sessao sobre*/
+.sessao.-bgPurple{
+    background-color: #8c70a7;
+}
+
+.sessao.-bdBlack
+{
+    border-color: black;
+}
+
+.main-description
+{
+    color: #fff;
+    font-size: 20px;
+    font-family: "Fira Code",Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/*confuguracoes do botao seta do carrossel*/
+.button-arrow
+{
+    width: 50px;
+    height: 50px;
+    background-color: #7940af;
+    box-shadow: 5px 5px 0px #000000;
+    cursor: pointer;
+}
+
+/*esconder o texto*/
+.button-arrow .content
+{
+    display: none;
+}
+/*esconder o texto*/
+
+/*desenhando a setas*/
+.button-arrow::before
+{
+    content: "";
+    display: block;
+    box-sizing:border-box;/*FAZ COM QUE A BORDA OCUPE TODO O TAMANHO DO ELEMENTO,PARTE INTERNA*/
+    width: 15px;
+    height: 15px;
+    border:15px solid transparent; /*deixa todas as outras bordas transparentes , nao aparecem*/
+    border-left: 28px solid white ;/*mandou a seta para adireita*/
+    transform: translateX(5px); /*movimenta a seta no eixo x apenas*/
+ }
+
+ .button-arrow.-left::before
+ {
+    transform: rotate(180deg) translateX(12px);
+ }
+
+
+ /*configuracoes dos cards do carrossel*/
+ .node-card
+ {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+ }
+
+
+.node-card::before
+{
+    content: "";
+    box-sizing: border-box;
+    height: 0px;
+    width: 40px;
+    border: 4px dashed black;
+    transform: rotate(90deg) translateX(140%);
+    bottom: 140px;
+}
+
+ .node-card .title
+ {
+    font-family: 'Press Start 2P', sans-serif; 
+    font-size: 25px;
+     font-weight: 400;
+     color: white ;
+     margin-bottom: 50px;
+
+ }
+
+ .node-card .logon
+ {
+    display: flex;
+    align-items: center;
+    height: 140px;
+    border: 5px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ceb02a;
+ }
+
+
+ /*variacao do logo caelum*/
+
+.node-card.-clean .logon
+{
+    padding: 0px;
+}
+
+/*Mudando as cores de fundo de dois cards*/
+.node-card.-first .logon
+{
+    background-color: blueviolet;
+}
+/*configuracoes do carrossel*/
+.main-carousel
+{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+   
+}
+
+.main-carousel::after
+{
+    content: "";
+    position: absolute;
+    
+    left: 40px;
+    top: 38px;
+    display: block;
+    height: 5px;
+    width: calc(100% - 80px);
+    background-color: #000;
+}
+
+.main-carousel::before
+{
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    left: 0px;
+    top: 38px;
+    border: 2px dashed #000;
+    display: block;
+    width: 100%;
+ 
+}
+
+.main-carousel .button-arrow
+{
+    position: absolute;
+     bottom: 70px;
+     transform: translateY(50%);
+}
+
+.main-carousel .button-arrow.-left
+{
+    left: 15px;
+}
+.main-carousel .button-arrow.-right
+{
+    right: 15px;
+}
+
+.main-carousel .items
+{    
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.main-carousel .elements
+{
+    display: flex;
+    justify-content: space-between;
+    transition: transform 100ms ease-in-out ;
+}
+
+
+/* FIM  da sessao sobre*/
+
+/*Formulario da sessao contatos*/
+.main-form
+{
+    padding: 50px 40px;
+    background-color: #3a4042;
+}
+
+
+.main-label
+{
+    color: #fff;
+    font-family: "Fira Code","sans-serif";
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 40px;
+    
+}
+
+.main-input
+{
+    box-sizing: border-box;
+    border: 5px solid #000000;
+    font-size: 30px;
+    height: 50px;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.main-input.-textarea
+{
+    height: 320px;
+}
+
+
+.main-form .main-input
+{
+    margin-bottom: 20px;
+}
+
+.main-form .main-input.-textarea
+{
+    margin-bottom: 40px;
+}
+
+.main-form .main-title
+{
+    margin-bottom: 50px;
+}
+
+
+/*rodape*/
+.main-footer
+{
+    display: flex;
+     justify-content: center;
+     align-items: center;/*corrigir o strech padrao do flex*/
+    background-color: #000;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.main-footer .action /*posicionamento dos espaçamentos dos logos no rodape*/
+{
+    margin-right: 20px;
+    margin-left: 20px;
+}
